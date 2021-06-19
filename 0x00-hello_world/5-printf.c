@@ -3,9 +3,8 @@
 
 /**
  * main void - short description
- * @printf: second member
- * @return: returns 0
  * Description: longer description
+ * Return: returns 0 since function is void
  */
 int main(void)
 {
