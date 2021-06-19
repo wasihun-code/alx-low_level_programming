@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/* main - prints a text to standard output
+/**
+ * main - prints a text to standard output
  * Return: returns 0 since it is void
  */
 int main(void)
