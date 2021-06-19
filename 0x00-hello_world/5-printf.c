@@ -2,9 +2,10 @@
 #include <stdlib.h>
 
 /**
- * function: main
- * with: printf
- * prints something
+ * main void - short description
+ * @printf: second member
+ * @return: returns 0
+ * Description: longer description
  */
 int main(void)
 {
