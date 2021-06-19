@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main void - short description
+ * main - prints a text to standard output
  * Description: longer description
  * Return: returns 0 since function is void
  */
