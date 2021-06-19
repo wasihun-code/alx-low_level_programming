@@ -1,9 +1,10 @@
-/* This is documentation*/
+/* Program: printf
+   Author: wasihun */
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(void)
 {
-	printf(stderr, "with proper grammer, but the outcome is a piece of art,\n");
+	printf("with proper grammer, but the outcome is a piece of art,\n");
 	return (0);
 }
