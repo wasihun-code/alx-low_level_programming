@@ -1,2 +1,2 @@
 #!/bin/bash
-cat main.c > c
+cat 0-main.c > c
