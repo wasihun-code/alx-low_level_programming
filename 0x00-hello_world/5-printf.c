@@ -1,9 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h
 
 /**
- * main - prints a text to standard output
- * Description: longer description
+ * main - Entry point
+ *
  * Return: returns 0 since function is void
  */
 
