@@ -1,2 +1,0 @@
-#!/bin/bash
-gcc 3-main.c -0 cisfun
