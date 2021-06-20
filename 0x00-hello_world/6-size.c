@@ -8,13 +8,16 @@
 
 int main(void)
 {
-	fst = "byte(s)"
-	int i;
-	long l;
-	double d;
-	char c;
-	printf("Size of a char: %lu.\n" , (unsigned long)sizeof(c) , "byte(s)");
-	printf("Size of an int: %lu.\n" , (unsigned long)sizeof(i) , "byte(s)");
-	printf("Size of a long int: %lu.\n" , (unsigned long)sizeof(l) , "%c" ); 
+        char c;
+	char str[] = "byte(s)";
+	int l;
+	long e;
+	long int s;
+	float f;
+	printf("Size of a char: %lu %s\n" , (unsigned long)sizeof(c), str);
+	printf("Size of an int: %lu %s\n" , (unsigned long)sizeof(l), str);
+	printf("Size of a long int: %lu %s\n" , (unsigned long)sizeof(e), str);
+        printf("Size of a long long int: %lu %s\n" , (signed long)sizeof(s), str);
+	printf("Size of a float: %lu %s\n" , (unsigned long)sizeof(f), str);
 	return(0);
 }
