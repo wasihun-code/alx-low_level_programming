@@ -12,7 +12,7 @@ int main(void)
 	char str[] = "byte(s)";
 	int l;
 	long e;
-	long int s;
+	long long int s;
 	float f;
 	printf("Size of a char: %lu %s\n" , (unsigned long)sizeof(c), str);
 	printf("Size of an int: %lu %s\n" , (unsigned long)sizeof(l), str);
