@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	/*17*/char c;
+	char c;
 	char str[] = "byte(s)";
 	int l;
 	long e;
