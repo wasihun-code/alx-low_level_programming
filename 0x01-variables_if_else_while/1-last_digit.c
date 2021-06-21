@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-/*
+/**
  * main - Entry point
  * main: last_digit finder
  * Return: 0
