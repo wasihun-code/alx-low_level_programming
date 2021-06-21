@@ -3,8 +3,7 @@
 #include <time.h>
 
 /*
- *
- * main - function that tells a random nos positivity
+ * main - Function that tells a random nos positivity
  *
  * description - Long description
  *
