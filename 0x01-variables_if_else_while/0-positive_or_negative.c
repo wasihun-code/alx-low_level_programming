@@ -2,11 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-/*
+/**
  * main - Function that tells a random nos positivity
- *
- * description - Long description
- *
  * Return: 0 since void
  */
 
