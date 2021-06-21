@@ -2,8 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main: numbers
- * main - numbers
+ * main - just for numbers
  * Return: numbers
  */
 
