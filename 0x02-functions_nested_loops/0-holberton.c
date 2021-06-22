@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "holberton.h"
 
 /**
- * main - base16
+ * main - d
  * Return: 0
  */
 
 int main(void)
 {
-	int i=2;
-
-	printf("%x %X \n", i, i);
 	return (0);
 }
