@@ -2,12 +2,14 @@
 
 /**
  * print_sign - documente
+ * @n - integer
  * Return: 0
  */
 
 int print_sign(int n)
 {
 	int result;
+
 	if (n > 0)
 	{
 		_putchar('-');
@@ -20,6 +22,7 @@ int print_sign(int n)
 	}
 	else
 	{
+		n = n * -1;
 		_putchar(45);
 		result = +1;
 	}
