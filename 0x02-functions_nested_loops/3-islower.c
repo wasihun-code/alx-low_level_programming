@@ -13,11 +13,11 @@ int _islower(int c)
 	results = _islower(c);
 	if (results >= 97 && results <= 122)
 	{
-		results == 1;
+		results = 1;
 	}
 	else
 	{
-		results == 0;
+		results = 0;
 	}
 	return (results);
 }
