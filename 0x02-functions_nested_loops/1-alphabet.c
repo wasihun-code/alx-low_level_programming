@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * onemain - Entry
  * print_alphabet - prints lower case alphabet
+ * onemain - Entry
  * Return: 0
  */
 int onemain(void)
