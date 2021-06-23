@@ -2,11 +2,12 @@
 #include <ctype.h>
 
 /**
- * main - Entry
+ * threemain - Entry
+ * _islower() - documentation
  * Return: 0
  */
 
-int main()
+int threemain()
 {
 	int r;
 

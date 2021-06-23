@@ -1,11 +1,12 @@
 #include "holberton.h"
 
 /**
- * main - Entry
+ * fivemain - Entry
+ * print_sign() - documente
  * Return: 0
  */
 
-int main(void)
+int fivemain(void)
 {
 	int r;
 

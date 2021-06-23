@@ -2,11 +2,12 @@
 #include <stdio.h>
 
 /**
- * main - Entry
+ * sixmain - Entry
+ * _abs() - documentation
  * Return: 0
  */
 
-int main(void)
+int sixmain(void)
 {
 	int r;
 

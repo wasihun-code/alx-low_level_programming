@@ -1,11 +1,12 @@
 #include "holberton.h"
 
 /**
- * main - Entry
+ * twomain - Entry
+ * print_alphabet_x10() - print alphabet 10 times lower case
  * Return: 0
  */
 
-int main(void)
+int twomain(void)
 {
 	print_alphabet_x10();
 	return (0);
