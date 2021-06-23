@@ -4,7 +4,7 @@
  * main - Entry
  * Return: 0
  */
-int main(void)
+int onemain(void)
 {
 	print_alphabet();
 	return (0);
