@@ -1,16 +1,10 @@
 #include "holberton.h"
 
 /**
- * print_alphabet() - prints lower case alphabet
+ * print_alphabet - prints lower case alphabet
  * onemain - Entry
  * Return: 0
  */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
 void print_alphabet(void)
 {
 	int i;
