@@ -3,6 +3,7 @@
 
 /**
  * _abs - documentation
+ * @n: integer
  * Return: 0
  */
 
