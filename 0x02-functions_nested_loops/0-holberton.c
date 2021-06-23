@@ -8,10 +8,11 @@
 int main(void)
 {
 	int i;
-	char array[] = "Holberton";
+	char name[] = "Holberton";
+
 	for (i = 0; i <= 8; i++)
 	{
-		_putchar(array[i]);
+		_putchar(name[i]);
 	}
 	_putchar('\n');
 	return (0);
