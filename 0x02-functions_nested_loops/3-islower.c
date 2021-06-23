@@ -8,16 +8,16 @@
 
 int _islower(int c)
 {
-	int results;
+	int res;
 
-	results = _islower(c);
-	if (results >= 97 && results <= 122)
+	res = islower();
+	if (c >= 97 && c <= 122)
 	{
-		results = 1;
+		_putchar("%d", 1);
 	}
 	else
 	{
-		results = 0;
+		_putchar("%d", 0);
 	}
-	return (results);
+	return (res);
 }

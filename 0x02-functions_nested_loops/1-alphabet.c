@@ -2,7 +2,6 @@
 
 /**
  * print_alphabet - prints lower case alphabet
- * onemain - Entry
  * Return: 0
  */
 void print_alphabet(void)

@@ -1,32 +1,9 @@
 #include "holberton.h"
 
 /**
- * fivemain - Entry
- * print_sign() - documente
+ * print_sign - documente
  * Return: 0
  */
-
-int fivemain(void)
-{
-	int r;
-
-	r = print_sign(98);
-	_putchar(',');
-	_putchar(' ');
-	_putchar(r + '0');
-	_putchar('\n');
-	r = print_sign(0);
-	_putchar(',');
-	_putchar(' ');
-	_putchar(r + '0');
-	_putchar('\n');
-	r = print_sign(0xff);
-	_putchar(',');
-	_putchar(' ');
-	_putchar(r + '0');
-	_putchar('\n');
-	return (0);
-}
 
 int print_sign(int n)
 {
@@ -44,7 +21,7 @@ int print_sign(int n)
 	else
 	{
 		_putchar(45);
-		result = -1;
+		result = +1;
 	}
 	return (result);
 }
