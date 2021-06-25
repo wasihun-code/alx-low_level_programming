@@ -3,12 +3,13 @@
 
 /**
  * print_line - prints a line based on n
+ * @n: to test integer.
  */
 
 void print_line(int n)
 {
 	size_t i;
-	
+
 	if (n <= 0)
 	{
 		_putchar('\n');
