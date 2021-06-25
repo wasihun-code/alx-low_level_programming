@@ -2,6 +2,7 @@
 
 /**
  * print_square - print a square using #
+ * @n: no of #
  * Return: 0
  */
 
