@@ -1,0 +1,32 @@
+#include "holberton.h"
+#include <stddef.h>
+
+/**
+ * print_line - prints a line based on n
+ */
+
+void print_line(int n)
+{
+	int i;
+
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else if (n == 2)
+	{
+		for (size_t i = 0; i <= n-1; ++i)
+		{
+			_putchar('_');
+		}
+		_putchar('\n');
+	}
+	else
+	{
+		for (size_t i = 0; i <= n-1; ++i)
+		{
+			_putchar('_');
+		}
+		_putchar('\n');
+	}
+}
