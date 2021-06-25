@@ -7,15 +7,15 @@
 
 void print_line(int n)
 {
-	int i;
-
+	size_t i;
+	
 	if (n <= 0)
 	{
 		_putchar('\n');
 	}
 	else if (n == 2)
 	{
-		for (size_t i = 0; i <= n-1; ++i)
+		for (i = 0; i <= 1; ++i)
 		{
 			_putchar('_');
 		}
@@ -23,7 +23,7 @@ void print_line(int n)
 	}
 	else
 	{
-		for (size_t i = 0; i <= n-1; ++i)
+		for (i = 0; i <= 9; ++i)
 		{
 			_putchar('_');
 		}
