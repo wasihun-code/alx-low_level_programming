@@ -6,7 +6,7 @@
  * Return: 0 since void.
  */
 
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	int i;
 
@@ -22,4 +22,5 @@ void print_numbers(void)
 		}
 	}
 	_putchar('\n');
+
 }
