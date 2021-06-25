@@ -2,8 +2,6 @@
 
 /**
  * print_numbers - zero to ten.
- * @i: index for stdout.
- *
  */
 
 void print_numbers(void)
