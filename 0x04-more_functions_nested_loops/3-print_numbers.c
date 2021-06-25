@@ -4,7 +4,6 @@
  * print_numbers - zero to ten.
  * @i: index for stdout.
  *
- * Return: 0 since void.
  */
 
 void print_numbers(void)
