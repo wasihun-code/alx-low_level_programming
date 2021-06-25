@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_numbers - zero to ten.
+ * print_most_numbers - zero to ten.
  */
 
 void print_most_numbers(void)
