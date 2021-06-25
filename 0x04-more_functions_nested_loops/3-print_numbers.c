@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * print_numbers - zero to ten.
- * @i: index for stdout.
+ * print_numbers - Print numbers zero to ten.
+ * @i: The character to be printed.
  */
 
 void print_numbers(void)
