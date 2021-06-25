@@ -3,6 +3,7 @@
 /**
  * print_numbers - zero to ten.
  * @i: index for stdout.
+ *
  * Return: 0 since void.
  */
 
@@ -15,6 +16,4 @@ void print_numbers(void)
 		_putchar(i + '0');
 	}
 	_putchar('\n');
-	return (0);
-	
 }
