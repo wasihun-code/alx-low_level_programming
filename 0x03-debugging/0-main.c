@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - tests if integer is positive or negative or neither
- * Return: 0
+ * main - tests if integer is positive or negative.
+ * Return: 0.
  */
 
 int main(void)
