@@ -7,7 +7,7 @@
  * Return: 0 on success.
  */
 
-void_print_triangle(int n)
+void print_triangle(int n)
 {
 	int i, j, k;
 
@@ -23,5 +23,4 @@ void_print_triangle(int n)
 		}
 		printf("\n");
 	}
-	return (0);
 }
