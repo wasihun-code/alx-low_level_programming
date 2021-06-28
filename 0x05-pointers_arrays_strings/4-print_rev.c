@@ -27,5 +27,5 @@ void print_rev(char *str)
 		--i;
 	}
 	*rvptr = '\0';
-	printf("%s\n\n", revstr);
+	printf("%s\n", revstr);
 }
