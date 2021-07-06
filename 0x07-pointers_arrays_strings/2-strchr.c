@@ -1,4 +1,4 @@
-#include "Holberton.h"
+#include "holberton.h"
 
 /**
  * _strchr - first occurrence of a character.
