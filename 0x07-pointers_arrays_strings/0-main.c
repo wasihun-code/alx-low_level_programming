@@ -28,6 +28,6 @@ int main(void)
 	simple_print_buffer(buffer, 98);
 	_memset(buffer, 0x01, 95);
 	printf("----------------------\n");
-	simle_print_buffer(buffer, 98);
+	simple_print_buffer(buffer, 98);
 	return (0);
 }
