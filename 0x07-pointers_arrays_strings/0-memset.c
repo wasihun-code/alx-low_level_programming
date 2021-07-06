@@ -2,6 +2,9 @@
 
 /**
  * _memset - allocates c to memory.
+ * @s: points to an array of characters.
+ * @b: character to fill.
+ * @n: how many adress to fill.
  * Return: a character.
  */
 
