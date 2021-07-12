@@ -7,7 +7,7 @@
  * @argc: no of command line arguments.
  * @argv: arrays of string of command line arguments.
  * Return: 0.
- */
+*/
 
 int main(int argc, char *argv[])
 {
