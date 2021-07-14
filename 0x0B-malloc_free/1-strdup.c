@@ -12,7 +12,7 @@ char *_strdup(char *str)
 {
 	unsigned int i, k = 0;
 
-	char  *b = (char *)malloc(1000);
+	char  *b = (char *)malloc(sizeof(str));
 
 	if (str == NULL)
 		printf("failed to allocate memory\n");
