@@ -14,6 +14,10 @@ char *str_concat(char *s1, char *s2)
 	int i, j, k = 0;
 	char *s3 = (char *)malloc(1024);
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	if (s3 != NULL)
 	{
 		for (j = 0; s1[k] != '\0'; j++)
