@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * create_array - creates an array of characters and initialize it.
+ * _strdup - creates a memory on heap to store a string.
  * @str: pointer to a string.
  * Return: pointer to a character string.
  */
