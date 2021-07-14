@@ -11,19 +11,19 @@
 char *_strdup(char *str)
 {
 	unsigned int i, k = 0;
-	char  *ptr = (char *)malloc(sizeof(str));
+	char  *ptr = (char *)malloc(sizeof(str) + 10);
 
 	if (str == NULL)
 		printf("failed to allocate memory\n");
-	if (ptr != NULL)
-	{
-		for (i = 0; str[k] != '\0'; i++)
+	else
+		if (ptr != NULL)
 		{
-			*(ptr + i) = *(str + k);
-			k++;
+			for (i = 0; str[k] != '\0'; i++)
+			{
+				*(ptr + i) = *(str + k);
+				k++;
+			}
+			ptr[i] = '\0';
 		}
-		ptr[i] = '\0';
-
-	}
 	return (ptr);
 }
