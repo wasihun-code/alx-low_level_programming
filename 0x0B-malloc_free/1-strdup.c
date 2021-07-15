@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
-#include <stdlib.h>
+0;276;0c#include <stdlib.h>
 
 /**
  * _strdup - creates a memory on heap to store a string.
