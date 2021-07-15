@@ -1,4 +1,6 @@
 #include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * malloc_checked(unsigned int b)
@@ -6,7 +8,15 @@
  * Return: pointer to the allocated memory.
  */
 
-void *malloc_checked(unisgned int b)
+void *malloc_checked(unsigned int b)
 {
 	void *ptr = malloc(b);
+
+	if (ptr == NULL)
+	{
+		printf("%d", 98);
+		exit(1);
+	}
+
+	return (ptr);
 }
