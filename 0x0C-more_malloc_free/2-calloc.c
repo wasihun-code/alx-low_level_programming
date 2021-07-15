@@ -13,8 +13,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *calloc = malloc(nmemb * size);
 
-	if (calloc == NULL || nmemb == 0 || size == 0)
-		return (NULL);
+	if (nmemb == 0 || size == 0)
+		exit(1);
+	if (calloc == 0)
+		exit(1);
 
 	return (calloc);
 }
