@@ -20,7 +20,7 @@ int *array_range(int min, int max)
 	}
 	if (array == NULL)
 	{
-		array = (int *)malloc ((max + 1) * sizeof(int));
+		array = (int *)malloc((max + 1) * sizeof(int));
 		for (i = min; i <= max; i++)
 		{
 			array[i] = i;
