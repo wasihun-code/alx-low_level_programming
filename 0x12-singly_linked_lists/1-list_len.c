@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * print_list - prints values in nodes.
+ * list_len - returns no of nodes.
  * @h: no of nodes.
  * Return: No of nodes.
  */
