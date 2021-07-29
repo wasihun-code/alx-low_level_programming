@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "holberton.h"
+#include "lists.h"
 
 /**
  * print_list - prints values in nodes.
@@ -21,5 +21,5 @@ size_t print_list(const list_t *h)
 		h = h->next;
 		count++;
 	}
-	return (0);
+	return (count);
 }
