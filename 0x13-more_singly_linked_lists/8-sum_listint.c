@@ -6,7 +6,7 @@
 /**
  * sum_listint - returns sum of a linkedlist
  * @head: points to head of node
- * Returns: integer.
+ * Return: integer.
  */
 
 int sum_listint(listint_t *head)
@@ -15,7 +15,7 @@ int sum_listint(listint_t *head)
 
 	if (head == NULL)
 		return (0);
-	while (head!=NULL)
+	while (head != NULL)
 	{
 		sum = sum + head->n;
 		head = head->next;
