@@ -20,5 +20,5 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	(*head) = new;
 	if (new == NULL || *head == NULL)
 		return (NULL);
-	return (*head);
+	return (new);
 }
