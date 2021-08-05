@@ -9,13 +9,18 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int i = 0, binaryNum[1000];
+	unsigned int  i = 0, j, binaryNum[1000];
 
+	if (n == 0)
+		return (0);
 	while (n >= 1)
 	{
 		binaryNum[i] = n % 2;
 		n = n / 2;
 		i++;
 	}
+	j = sizeof(binaryNum) / sizeof(unsigned int);
+	if (j < index)
+		return (-1);
 	return (binaryNum[index]);
 }
