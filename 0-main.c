@@ -1,13 +1,23 @@
 #include <stdio.h>
-#include "dog.h"
+#include <fcntl.h>
 
-int main(void)
+int main()
 {
-	struct dog my_dog;
+	printf("O_RDWR %d\n", O_RDWR);
 
-	my_dog.name = "Poppy";
-	my_dog.age = 3.5;
-	my_dog.owner = "Bob";
-	printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
-	return (0);
+	printf("%d\n", O_RDONLY);
+	printf("%d\n", 1);
+	printf("%d\n", 2);
+	printf("%d\n", 3);
+	printf("%d\n", 1 << 1);
+	printf("%d\n", 3 & 2);
+	printf("%d\n", 3 | 2);
+	printf("%d\n", O_WRONLY);
+	printf("%d\n", O_RDONLY + O_WRONLY);
+	printf("%d\n", O_RDONLY | O_WRONLY);
+	printf("%d\n", O_RDONLY & O_WRONLY);
+	printf("%d\n", O_RDONLY && O_WRONLY);
+	printf("%d\n", O_RDONLY << 1);
+	printf("%d\n", O_WRONLY << 1);
+	printf("%d\n", 0);
 }
