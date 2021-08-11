@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * append_text_to_file - appends a text to the end of a file.
+ * @filename: - name of the file.
+ * @text_content: a Null terminated string to be appended.
+ * Return: 0.
+ */
+
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
@@ -10,7 +17,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 
 	write(fd, text_content, sizeof(text_content));
-	close (fd);
+	close(fd);
 
-	return (fd-2);
+	return (fd - 2);
 }
