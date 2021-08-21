@@ -8,8 +8,19 @@
 
 int main(void)
 {
-	int i=2;
+	int i = 0;
+	char ch = 'a';
 
-	printf("%x %X \n", i, i);
+	while (i <= 9)
+	{
+		putchar(i + '0');
+		i++;
+	}
+	while (ch <= 'f')
+	{
+		putchar (ch);
+		ch++;
+	}
+	putchar('\n');
 	return (0);
 }
