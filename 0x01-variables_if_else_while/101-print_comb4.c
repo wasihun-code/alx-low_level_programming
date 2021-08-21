@@ -21,7 +21,7 @@ int main(void)
 				if (i >= 0 && i < 7)
 				{
 					putchar(',');
-					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
