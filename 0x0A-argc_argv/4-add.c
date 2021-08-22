@@ -1,10 +1,12 @@
 #include "holberton.h"
+
 /**
   * main - adds passed argument
   * @argc: count padded arguments
   * @argv: argumnets
   * Return: 0
   */
+
 int main(int argc, char *argv[])
 {
 	int j, k, sum = 0;
