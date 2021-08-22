@@ -21,7 +21,7 @@ int _naturalsqrt(int a, int b)
  *@n: number.
  *Return: result.
  */
-
+ 
 int _sqrt_recursion(int n)
 {
 	return (_naturalsqrt(n, 1));

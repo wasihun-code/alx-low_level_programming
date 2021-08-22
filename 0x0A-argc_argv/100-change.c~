@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 		cc5 = cent / 1;
 		cent %= 1;
 	}
-
+	
 	re = cc1 + cc2 + cc3 + cc4 + cc5;
 	printf("%d\n", re);
 	return (0);
