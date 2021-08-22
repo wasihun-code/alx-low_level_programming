@@ -6,7 +6,7 @@ int main(void)
 {
 	char *s;
 
-	s = _strdup(" Thos who hate the meomoadjaod adoajsajdoada aoa");
+	s = _strdup("Holberton");
 	if (s == NULL)
 	{
 		printf("failed to allocate memory\n");

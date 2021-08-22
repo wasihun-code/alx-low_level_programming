@@ -1,25 +1,32 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * pop_listint - delete the head node.
- * @head: points to head.
- * Return: integer.
- */
+  * pop_listint - delete the head node
+  * @head: head node
+  * Return: data (element) of the deleted node
+  */
 
 int pop_listint(listint_t **head)
 {
-	int s = 0;
-	struct listint_s *Newnode = malloc(sizeof(struct listint_s));
+	listint_t *ptr;
+	listint_t *head2;
+	int num;
 
 	if (*head == NULL)
+	{
+		free(*head);
 		return (0);
-	Newnode = *head;
-	s = Newnode->n;
+	}
+	else
+	{
+		head2 = *head;
+		ptr = head2;
+		num = ptr->n;
+		head2 = head2->next;
+		free(ptr);
+		*head = head2;
+	}
 
-	*head = (*head)->next;
-	free(Newnode);
-	return (s);
+	head2 = NULL;
+	return (num);
 }

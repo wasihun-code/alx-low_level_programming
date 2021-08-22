@@ -1,24 +1,21 @@
 #include "holberton.h"
 
 /**
- * more_numbers - prints 0 to 14
- * Return: 0;
- */
+  * more_numbers - print nums form 0 - 14, 10 times
+  * Return: void nothing
+  */
 
-void more_numbers(void);
+void more_numbers(void)
 {
-	int i, j, k;
-	char ar[] = "11121314";
+	int rows, cols;
 
-	for (k = 0; k < 10; k++)
+	for (rows = 0; rows < 10; rows++)
 	{
-		for (i = 0; i < 10; i++)
+		for (cols = 0; cols <= 14; cols++)
 		{
-			_putchar(i + '0');
-		}
-		for (j = 0; j <= 7; j++)
-		{
-			_putchar(ar[j]);
+			if (cols > 9)
+				_putchar(cols / 10 + '0');
+			_putchar(cols % 10 + '0');
 		}
 		_putchar('\n');
 	}

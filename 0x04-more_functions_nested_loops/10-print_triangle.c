@@ -7,20 +7,23 @@
  * Return: 0 on success.
  */
 
-void print_triangle(int n)
-{
-	int i, j, k;
+ void print_triangle(int size)
+ {
+ 	int row, col, col2;
 
-	for (i = 1; i <= n; i++)
-	{
-		for (k = n - 1; k > 0; k--)
-		{
-			printf(" ");
-		}
-		for (j = 1; j <= i; j++)
-		{
-			printf("#");
-		}
-		printf("\n");
-	}
-}
+ 	if (size <= 0)
+ 		_putchar('\n');
+
+ 	for (row = 1; row <= size; row++)
+ 	{
+ 		for (col = row; col < size; col++)
+ 		{
+ 			_putchar(' ');
+ 		}
+ 		for (col2 = 1; col2 <= row; col2++)
+ 		{
+ 			_putchar('#');
+ 		}
+ 		_putchar('\n');
+ 	}
+ }

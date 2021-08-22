@@ -1,29 +1,31 @@
 #include "holberton.h"
 #include <stdio.h>
-0;276;0c#include <stdlib.h>
+#include <stdlib.h>
 
 /**
- * _strdup - creates a memory on heap to store a string.
- * @str: pointer to a string.
- * Return: pointer to a character string.
+ * _strdup - prints buffer in hexadecimal.
+ * @str: the address of memory to print
+ * Return: character.
  */
 
 char *_strdup(char *str)
 {
-	unsigned int i, k = 0;
-	char  *ptr = (char *)malloc(sizeof(str) + 10);
+	char *duplicate;
+	int i, len = 0;
 
 	if (str == NULL)
-		printf("failed to allocate memory\n");
-	else
-		if (ptr != NULL)
-		{
-			for (i = 0; str[k] != '\0'; i++)
-			{
-				*(ptr + i) = *(str + k);
-				k++;
-			}
-			ptr[i] = '\0';
-		}
-	return (ptr);
+		return (NULL);
+
+	for (i = 0; str[i]; i++)
+		len++;
+
+	duplicate = malloc(sizeof(char) * (len + 1));
+	if (duplicate == NULL)
+		return (NULL);
+
+	for (i = 0; str[i]; i++)
+		duplicate[i] = str[i];
+	duplicate[len] = '\0';
+
+	return (duplicate);
 }

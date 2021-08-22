@@ -3,19 +3,24 @@
 
 /**
  * _strcat - appends src to dest string.
+ * @dest: new string.
+ * @src: string to be copied to dest.
  * Return: character string to a pointer.
  */
 
-char _strcat(char* dest, char* src)
+char *_strcat(char *dest, char *src)
 {
-	int k, i = 6;
+	int len, ind2;
 
-	for (k = 0; k < 7; k++)
+	for (len = 0; dest[len] != '\0'; len++)
+		;
+
+	for (ind2 = 0; src[ind2] != '\0'; ind2++)
 	{
-		*(dest + i) = *(src + k);
-		i++;
+		dest[len] = src[ind2];
+		len++;
 	}
-	strcpy(dest,"Hello World!\n");
 
+	dest[len] = '\0';
 	return (dest);
 }

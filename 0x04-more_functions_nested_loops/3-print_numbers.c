@@ -2,6 +2,7 @@
 
 /**
  * print_numbers - Print numbers zero to ten.
+ * Return: void.
  */
 
 void print_numbers(void)

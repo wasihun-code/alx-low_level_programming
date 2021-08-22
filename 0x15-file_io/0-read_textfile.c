@@ -1,31 +1,51 @@
 #include "main.h"
-#include <string.h>
-#define BFSIZE 16384
+#include "holberton.h"
 
 /**
- * read_textfile - reads a text file to print it to the standard POSIX.
- * @filename: name of file to be read and printed.
- * @letters: No of bytes to be printed.
- * Return: signed integer.
- */
+  * read_textfile - read and printout form a file
+  * @filename: nameof the file
+  * @letters: sizeof bytes to read and printout
+  * Return: the number of bytes that read
+  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	char buf[BFSIZE];
+	int opn, red, wrt;
+	char *buff;
 
-	fd = open(filename, O_WRONLY | O_CREAT, 0644);
-
-	if (filename == NULL || fd < 0)
+	if (filename == NULL)
+	{
 		return (0);
-
-	read(fd, buf, letters);
-	write(fd, buf, letters);
-	buf[letters] = '\0';
-	close(fd);
-
-	if (close(fd) < 0)
+	}
+	buff = malloc(sizeof(char) * letters);
+	if (buff == NULL)
+	{
+		free(buff);
 		return (0);
+	}
+	opn = open(filename, O_RDONLY);
+	red = read(opn, buff, letters);
+	if (opn == -1 || red == -1)
+	{
+		free(buff);
+		return (0);
+	}
+	close(opn);
+	opn = open(filename, O_RDWR);
+	if (opn == -1)
+	{
+		free(buff);
+		return (0);
+	}
+	red = read(opn, buff, letters);
+	wrt = write(STDOUT_FILENO, buff, red);
+	if (wrt == -1 || wrt != red)
+	{
+		free(buff);
+		return (0);
+	}
+	close(opn);
 
-	return (letters);
+	free(buff);
+	return (wrt);
 }

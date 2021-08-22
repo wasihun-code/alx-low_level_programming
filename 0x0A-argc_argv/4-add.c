@@ -1,33 +1,31 @@
-#include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
 #include "holberton.h"
-
 /**
- * main - prints the additon of positive numbers to stdiout.
- * @argc: noof command line arguments passed.
- * @argv: command line arguments.
- * Return: 0.
- */
-
+  * main - adds passed argument
+  * @argc: count padded arguments
+  * @argv: argumnets
+  * Return: 0
+  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int j, k, sum = 0;
 
+	if (argc == 1)
+		printf("0\n");
 	if (argc > 1)
 	{
-		for (i = 0; i < argc; i++)
+		for (j = 1; j < argc; j++)
 		{
-					sum += atoi(argv[i]);
-					if (isdigit(argv[i]))
-						printf("yes");
+			for (k = 0; argv[j][k] != '\0'; k++)
+			{
+				if (!(argv[j][k] >= '0' && argv[j][k] <= '9'))
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum += atoi(argv[j]);
 		}
 		printf("%d\n", sum);
 	}
-	else
-	{
-		printf("0\n");
-	}
-
 	return (0);
 }

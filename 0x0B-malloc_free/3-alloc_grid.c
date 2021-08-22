@@ -3,29 +3,41 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - returns a pointer to a 2 simensional arrays of integers.
- * @width: first dimension.
- * @height: second dimension.
- * Retrun: 0
+ * alloc_grid - alloc width and height
+ * @width: width
+ * @height: height
+ * Return: int
  */
 
 int **alloc_grid(int width, int height)
 {
-	int i, j;
-	int **array = (int **)malloc(width * height * 4);
+	int **ar, j, k;
 
-	if (width <= 0 || height <= 0)
-		return NULL;
+	if (height <= 0 || width <= 0)
+		return (NULL);
 
-	if (array != NULL)
+	ar = malloc(sizeof(int *) * height);
+	if (ar == NULL)
+		return (NULL);
+
+	for (j = 0; j < height; j++)
 	{
-		for (i = 0; i < width; i++)
+		ar[j] = malloc(sizeof(int) * width);
+		if (ar[j] == NULL)
 		{
-			for (j = 0; j < height; j++)
-			{
-				**((array + i) + j)= 0;
-			}
+			for (k = 0; k < width; k++)
+				free(ar[k]);
+			free(ar);
+			return (NULL);
 		}
 	}
-	return (array);
+
+	for (j = 0; j < height; j++)
+	{
+		for (k = 0; k < width; k++)
+		{
+			ar[j][k] = 0;
+		}
+	}
+	return (ar);
 }

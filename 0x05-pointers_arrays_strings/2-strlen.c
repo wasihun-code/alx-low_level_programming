@@ -7,7 +7,11 @@
  * Return: character.
  */
 
-int _strlen(char *s);
+int _strlen(char *s)
 {
-	return (*s);
+	int len;
+
+	for (len = 0; s[len] != '\0'; len++)
+		;
+	return (len);
 }

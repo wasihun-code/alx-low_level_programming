@@ -1,28 +1,23 @@
 #include "holberton.h"
 
 /**
- * print_square - print a square using #
- * @n: no of #
- * Return: 0
- */
+  * print_square - print # character n times
+  * @size: size of the sqaure
+  * Return: none void
+  */
 
-void print_square(int n)
+void print_square(int size)
 {
-	int i, j;
+	int row, col;
 
-	if (n != 0)
-	{
-		for (j = 0; j < n; j++)
-		{
-			for (i = 0; i < n; i++)
-			{
-				_putchar('#');
-			}
+	if (size <= 0)
 		_putchar('\n');
-		}
-	}
-	else
+	for (row = 1; row <= size; row++)
 	{
+		for (col = 1; col <= size; col++)
+		{
+			_putchar('#');
+		}
 		_putchar('\n');
 	}
 }

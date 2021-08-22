@@ -16,10 +16,12 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 		printf("failed to allocate memory\n");
+
 	if (b != NULL)
 	{
 		for (i = 0; i <= size; i++)
 			*(b + i) = c;
 	}
+	
 	return (b);
 }

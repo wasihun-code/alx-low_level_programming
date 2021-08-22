@@ -1,53 +1,50 @@
-#include <fcntl.h>
-#include <errno.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#define BSIZE 16384
-
+#include "main.h"
+#include "holberton.h"
 /**
- * main - copies a text from one file to another.
- * @ac: no of command line arguments.
- * @av: array of strings of command line arguments.
- * Return: integer.
- */
-
-int main(int ac, char **av)
+  * main - copies a content from one file to another
+  * @argc: number of argumentes
+  * @argv: arguments of the main
+  * Return: Success zero
+  */
+int main(int argc, char *argv[])
 {
-	int fd1, fd2, count;
-	char buf[BSIZE];
+	int opn, opn2, red, wrt, cls, cls2, len;
+	char *from = argv[1], *to = argv[2];
+	char buff[1024];
 
-	if (ac != 3)
+	if (argc != 3)
 	{
-		printf("Usage: cp %s %s \n", av[1], av[2]);
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
-
-	fd1 = open(av[1], O_RDONLY);
-
-	if (fd1 < 0)
-		printf("Error: Can't read from %s \n", av[1]);
-
-	fd2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0600);
-
-	if (fd2 < 0)
-		printf("Error: Can't write to %s \n", av[2]);
-
-	while ((count = read(fd1, buf, BSIZE)) > 0)
-		write(fd2, buf, count);
-
-	close(fd1);
-	close(fd2);
-	if (fd1)
+	opn = open(from, O_RDONLY);
+	red = read(opn, buff, 1024);
+	if (opn == -1 || red == -1)
 	{
-		printf("Error: Can't close fd %d\n", fd1);
+		dprintf(2, "Error: Can't read from %s\n", from);
+		exit(98);
+	}
+	cls = close(opn);
+	if (cls == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\b", opn);
 		exit(100);
 	}
-	if (fd2)
+	opn2 = open(to, O_CREAT | O_WRONLY | O_TRUNC | O_SYNC, 0664);
+	/*		S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);*/
+	for (len = 0; buff[len] != '\0'; len++)
+		;
+	wrt = write(opn2, buff, len);
+	if (opn2 == -1 || wrt == -1)
 	{
-		printf("Error: Can't close fd %d\n", fd2);
+		dprintf(2, "Error: Can't write to %s\n", to);
+		exit(99);
+	}
+	cls2 = close(opn2);
+	if (cls2 == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\b", opn2);
 		exit(100);
 	}
 	return (0);
-
 }

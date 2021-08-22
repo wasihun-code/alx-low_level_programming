@@ -1,30 +1,53 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - insert a node at a given position.
- * @head: pointer to pointer of head of node.
- * @idx: index for positon.
- * @n: data for new node.
- * Return: pointer
- */
+  * insert_nodeint_at_index - insert a node at given position
+  * @head: head of the node
+  * @idx: index of node ot insert (index starts from 0)
+  * @n: node data to assign to the inserted node
+  * Return: the new inserted node
+  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	struct listint_s *ptr = *head;
-	struct listint_s *ptr2 = malloc(sizeof(struct listint_s));
+	listint_t *insert;
+	listint_t *traverse;
+	listint_t *cpy_head;
+	unsigned int index = 0;
 
-	ptr2->n = n;
-	ptr2->next = NULL;
-	idx--;
-	while (idx != 1)
+	if (*head == NULL)
 	{
-		ptr = ptr->next;
-		idx--;
+		free(*head);
+		return (NULL);
 	}
-	ptr2->next = ptr->next;
-	ptr->next = ptr2;
-	return (ptr);
+	cpy_head = *head;
+
+	insert = malloc(sizeof(listint_t));
+	if (insert == NULL)
+	{
+		free(insert);
+		return (NULL);
+	}
+	insert->n = n;
+	traverse = cpy_head;
+
+	if (idx == 0)
+	{
+		insert->next = *head;
+		*head = insert;
+		return (*head);
+	}
+
+	while (traverse != NULL)
+	{
+		if (idx == index + 1)
+		{
+			insert->next = traverse->next;
+			traverse->next = insert;
+			return (*head);
+		}
+		traverse = traverse->next;
+		index++;
+	}
+	return (NULL);
 }

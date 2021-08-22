@@ -4,30 +4,16 @@
 /**
  * print_line - prints a line based on n
  * @n: to test integer.
+ * Return: void.
  */
 
-void print_line(int n)
-{
-	size_t i;
+ void print_line(int n)
+ {
+ 	int len = 1;
 
-	if (n <= 0)
-	{
-		_putchar('\n');
-	}
-	else if (n == 2)
-	{
-		for (i = 0; i <= 1; ++i)
-		{
-			_putchar('_');
-		}
-		_putchar('\n');
-	}
-	else
-	{
-		for (i = 0; i <= 9; ++i)
-		{
-			_putchar('_');
-		}
-		_putchar('\n');
-	}
-}
+ 	for (len = 1; len <= n; len++)
+ 	{
+ 		_putchar('_');
+ 	}
+ 	_putchar('\n');
+ }
