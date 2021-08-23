@@ -9,20 +9,20 @@
  * Return: 0.
  */
 
- void *_calloc(unsigned int nmemb, unsigned int size)
- {
- 	unsigned int i;
- 	char *ptr;
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+	unsigned int i;
+	char *ptr;
 
- 	if (nmemb == 0 || size == 0)
- 		return (NULL);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
 
- 	ptr = malloc(size * nmemb);
+	ptr = malloc(size * nmemb);
 
- 	if (ptr == NULL)
- 		return (NULL);
- 	for (i = 0; i < size * nmemb; i++)
- 		ptr[i] = 0;
+	if (ptr == NULL)
+		return (NULL);
+	for (i = 0; i < size * nmemb; i++)
+		ptr[i] = 0;
 
- 	return (ptr);
- }
+	return (ptr);
+}
