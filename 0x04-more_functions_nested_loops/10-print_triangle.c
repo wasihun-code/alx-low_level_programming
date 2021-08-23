@@ -3,7 +3,7 @@
 
 /**
  * print_triangle - prints a triangle using #
- * @n: no of lines of triangle.
+ * @size: no of lines of triangle.
  * Return: 0 on success.
  */
 
