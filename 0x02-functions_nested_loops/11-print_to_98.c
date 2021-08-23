@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - Entry
+ * print_to_98 - function to printnumbers 0 to 98.
+ * @n: integer
  * Return: 0
  */
 void print_to_98(int n)
