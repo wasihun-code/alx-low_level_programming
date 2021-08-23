@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "main.h"
 
 /**
  * _isupper - check if upper or lower
