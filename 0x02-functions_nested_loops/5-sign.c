@@ -2,7 +2,7 @@
 
 /**
  * print_sign - documente
- * @n - integer
+ * @n: integee
  * Return: 0
  */
 

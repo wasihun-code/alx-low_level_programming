@@ -1,7 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - Entry
+ * _isalpha - checks if a character is alphanumeric or not.
+ * @c: character to be checked.
  * Return: 0
  */
 
