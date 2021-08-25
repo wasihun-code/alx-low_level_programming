@@ -13,7 +13,7 @@
 
 char **strtow(char *str)
 {
-	int bufsize = BUFFERSIZE, position = 0;
+	int bufsize = BUFFERSIZE, position = 0, j;
 	char **tokens = (char **)malloc(sizeof(char *) * bufsize);
 	char *token;
 

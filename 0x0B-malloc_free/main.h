@@ -1,5 +1,5 @@
-#ifndef HOLBERTON_H_
-#define HOLBERTON_H_
+#ifndef MAIN_H_
+#define MAIN_H_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,6 +11,5 @@ int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
 int _putchar(char c);
-char **strtow(char *str);
 
 #endif
