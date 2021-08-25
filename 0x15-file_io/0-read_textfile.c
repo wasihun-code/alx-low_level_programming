@@ -1,13 +1,11 @@
 #include "main.h"
 #include "holberton.h"
-
 /**
   * read_textfile - read and printout form a file
   * @filename: nameof the file
   * @letters: sizeof bytes to read and printout
   * Return: the number of bytes that read
   */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int opn, red, wrt;
