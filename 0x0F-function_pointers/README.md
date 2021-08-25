@@ -1,0 +1,1 @@
+Function points to code not data.
