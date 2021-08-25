@@ -1,24 +1,28 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
-
+#include <stdlib.h>
 /**
- * free_listint2 - frees a node.
- * @head: for traversing through the list.
- * Return: 0 since void.
+ *free_listint2-Frees memory occupied by a list.
+ *@head:Pointer to a pointer that points to the head of a linked list.
+ *Return:Nothing.
  */
-
 void free_listint2(listint_t **head)
 {
-	struct listint_s *current = *head;
-	struct listint_s *next;
+	listint_t *temp;
 
-	while (current != NULL)
+	if (head == NULL)
 	{
-		next = current->next;
-		free(current);
-		current = next;
+		free(head);
 	}
-	head = NULL;
+
+	else
+	{
+
+		while (*head != NULL)
+		{
+			temp = (*head);
+			(*head) = (*head)->next;
+			free(temp);
+		}
+		head = NULL;
+	}
 }
