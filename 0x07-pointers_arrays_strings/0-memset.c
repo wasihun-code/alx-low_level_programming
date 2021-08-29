@@ -9,13 +9,14 @@
  */
 
 
-void *_memset(void *s, int c, size_t n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int index;
-	unsigned char *memory = s, value = c;
+	unsigned int ln;
 
-	for (index = 0; index < n; index++)
-		memory[index] = value;
+	char *memory = s, value = b;
+
+	for (ln = 0; ln < n; ln++)
+		memory[ln] = value;
 
 	return (memory);
 }
