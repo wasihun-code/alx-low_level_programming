@@ -9,9 +9,8 @@
  * Return: Always 0.
  */
 
-int main(argc, char *argv[])
+int main(int __attribute__((__unused__) argc, char *argv[])
 {
-	(void)argc;
 	char password[7], *codex;
 	int len = strlen(argv[1]), i, tmp;
 
