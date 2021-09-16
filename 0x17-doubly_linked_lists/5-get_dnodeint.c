@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * get_dnodeint - gets the node @index
+ * get_dnodeint_at_index - gets the node at index
+ * @head: pointer to transverse
  * @index: index of the node.
  * Return: address of index o node.
  */
@@ -14,7 +15,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	{
 		if (len == index)
 			break;
-		head = head -> next;
+		head = head->next;
 		len++;
 	}
 

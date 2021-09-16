@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * sum_dnodeint - find sum of all data in a linked list
- * @index: index of the node.
+ * sum_dlistint - find sum of all data in a linked list
+ * @head: pointer to transverse
  * Return: address of index o node.
  */
 
@@ -13,7 +13,7 @@ int sum_dlistint(dlistint_t *head)
 	while (head != NULL)
 	{
 		sum += head->n;
-		head = head -> next;
+		head = head->next;
 	}
 
 	return (sum);
