@@ -1,6 +1,12 @@
 #include "hash_tables.h"
 #define FIRST 16
 
+/**
+ * hash_table_create - creates a hash table
+ * @size: size of array.
+ * Return: pointer to hash table.
+ */
+
 hash_table_t *hash_table_create(unsigned long int size)
 {
     hash_table_t *table = malloc(sizeof(hash_table_t));
